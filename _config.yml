@@ -77,6 +77,7 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: type:git
-  repository:https://github.com/geocompass/geocompass.github.io.git
-  branch:hexo
+deploy: 
+  type: git
+  repository: https://github.com/geocompass/geocompass.github.io.git
+  branch: master
