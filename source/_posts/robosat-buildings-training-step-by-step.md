@@ -1,5 +1,5 @@
 ---
-title: robosat_buildings_training_step_by_step
+title: 手把手教你用Mapbox的RoboSat基于深度学习自动提取建筑物
 date: 2019-08-17 22:13:01
 tags: "大数据"
 ---
