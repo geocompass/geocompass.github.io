@@ -22,5 +22,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [LOUSANPANG](https://github.com/geocompass).<br />
+Copyright © 2019 [Geo-Compass](https://github.com/geocompass).<br />
 This project is [ISC](https://github.com/geocompass) licensed.
