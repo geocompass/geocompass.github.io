@@ -25,8 +25,34 @@ git clone https://github.com/geocompass/geocompass.github.io.git
 #### 1.3 安装依赖
 ``` bash
 cd geocompass.github.io
+
 git checkout hexo
+
 npm install
+```
+#### 1.4 编码
+``` bash
+cd source/_posts
+
+cd bigdata/ #在对应适合你的文件夹下边建立 博客文档
+
+hexo n [Your Blod Name]
+
+编码格式请参照 3.1 关于写作
+```
+#### 1.5 部署
+``` bash
+git pull # 建议每次都要更新哦 也许你在书写过程中，有人已经提交code啦
+
+在hexo分支提交到远程你的代码例如：
+git add --a
+git commit -a -m 'Your name commit pages'
+git push
+
+手动将子目录的 .git 文件复制粘贴到 .deploy_git 文件中
+
+hexo g
+hexo d
 ```
 
 ### 二、常见命令
@@ -59,8 +85,9 @@ top: 1
 #### 1.1 标题1.1
 ``` 
 说明：
-* 需要注意`tags`和`categories`的写法，不然首页不能正确显示标签和摘要；
-* `cover_picture`文章封面图，不填默认显示_config.yml配置的图片。
+* 需要注意 `tags` 和 `categories` 的写法，不然首页不能正确显示标签和摘要；
+* `cover_picture` 文章封面图，不填默认显示_config.yml配置的图片。
+* `cover_picture` 建议添加符合自己博客的主题图片。
 
 ### 四、详细文档
 [Hexo主题文档](https://blog.minhow.com/2017/08/01/blog/installation-configuration/)
