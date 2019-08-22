@@ -19,17 +19,17 @@ banner_img: images/banner.jpg
 #    url: //geocompass.com    Url, absolute or relative path | 链接，绝对或相对路径
 #    target: true         Whether to jump out | 是否跳出
 menu:
-#   home:
-#     title: Home
-#     url: /
-#     target: false
+  home:
+    title: 写作
+    url: /2019/08/21/write/write/#more
+    target: false
   archive:
     title: 档案
     url: /archives
     target: false
   user:
-    title: About
-    url: /about
+    title: 我们
+    url: /2019/08/21/about/index/#more
     target: false
 # Social setting, use to display social information | 社交设置，用来展示社交信息
 #  name:                  Font Awesome icon | Font Awesome 图标

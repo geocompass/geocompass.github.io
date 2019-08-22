@@ -9,7 +9,7 @@ cover_picture: /images/markdown.jpg
 top: 2
 ---
 
-![miho](http://oerolc7og.bkt.clouddn.com/images/miho/theme/github.jpg)
+![miho](https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68har8gq4j31cq0u012u.jpg)
 
 ### 一、安装
 #### 1.1 安装前提
