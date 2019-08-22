@@ -1,9 +1,10 @@
 ---
 title: 关于我们
 date: 2019-08-21
-categories: LOUSANPANG
+categories: 国信司南
+author: LOUSANPANG
 tags:
-    - 介绍
+    - 关于我们
 cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg
 top: 1
 ---
