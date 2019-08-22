@@ -1,5 +1,5 @@
 ---
-title: 关于写作-Blog
+title: 关于写作
 date: 2019-08-21
 categories: 写作
 author: LOUSANPANG
