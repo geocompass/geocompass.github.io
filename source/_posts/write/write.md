@@ -25,13 +25,14 @@ git clone https://github.com/geocompass/geocompass.github.io.git
 #### 1.3 安装依赖
 ``` bash
 cd geocompass.github.io
+git checkout hexo
 npm install
 ```
 
 ### 二、常见命令
 #### 2.1 [命令](https://hexo.io/zh-cn/docs/commands)
 ``` bash
-hexo g == hexo generate #生成静态文件，会在当前目录下生成一个新的叫做public的文件夹
+hexo g == hexo generate #生成静态文件，在当前目录下生成一个新的叫做public的文件夹
 hexo s == hexo server #启动本地web服务，用于博客的预览
 hexo d == hexo deploy #部署播客到远端（比如github, heroku等平台）
 hexo clean #清除缓存文件 (db.json) 和已生成的静态文件 (public)
