@@ -1,15 +1,16 @@
 ---
 title: 关于我们
 date: 2019-08-21
-categories: 国信司南技术团队
+categories: 国信司南
+author: LOUSANPANG
 tags:
-    - 介绍
-cover_picture:
+    - 关于我们
+cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg
 top: 1
 ---
 
 <div align=center>
-    <img width=350 height="350" src="https://github.com/LOUSANPANG/Picture-library/blob/master/Images/geo.png">
+    <img width=350 height="350" src="https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg">
 </div>
 
 ### 关于我们
