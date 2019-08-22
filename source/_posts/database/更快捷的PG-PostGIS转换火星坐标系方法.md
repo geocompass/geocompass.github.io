@@ -28,15 +28,11 @@ GCJ-02（G-Guojia国家，C-Cehui测绘，J-Ju局），又被称为火星坐标�
 ### BD-09 - 百度坐标系系
 BD-09（Baidu, BD）是百度地图使用的地理坐标系，其在GCJ-02基础上又增加了一次偏移，用来保护用户隐私。从百度产品中得到的坐标都是BD-09坐标系。
 
-### 转换方法
-基于 PG+PostGIS 进行三种坐标系之间的转换，支持点、线、面、多点、多线、多面等各种需求进行互转
+### 如何安装
 
-**geoc_gcj02towgs84：火星坐标系转WGS84坐标系**
-**geoc_wgs84togcj02：WGS84坐标系转火星坐标系**
-**geoc_wgs84tobd09：WGS84坐标系转百度坐标系**
-**geoc_bd09towgs84：百度坐标系转WGS84坐标系**
-**geoc_gcj02tobd09：火星坐标系转百度坐标系**
-**geoc_bd09togcj02：百度坐标系转火星坐标系**
+PostgreSQL安装PostGIS扩展
+复制geoc-pg-coordtansform.sql中代码，在数据库执行
+github地址：https://github.com/geocompass/pg-coordtransform
 
 ### 示例
 
@@ -54,11 +50,21 @@ select geoc_gcj02tobd09(geom) from test_table
 BD09转GCJ02
 select geoc_bd09togcj02(geom) from test_table
 ```
-### 如何安装
 
-PostgreSQL安装PostGIS扩展
-复制geoc-pg-coordtansform.sql中代码，在数据库执行
-github地址：https://github.com/geocompass/pg-coordtransform
+### 转换方法
+基于 PG+PostGIS 进行三种坐标系之间的转换，支持点、线、面、多点、多线、多面等各种需求进行互转
+
+**geoc_gcj02towgs84：火星坐标系转WGS84坐标系**
+**geoc_wgs84togcj02：WGS84坐标系转火星坐标系**
+**geoc_wgs84tobd09：WGS84坐标系转百度坐标系**
+**geoc_bd09towgs84：百度坐标系转WGS84坐标系**
+**geoc_gcj02tobd09：火星坐标系转百度坐标系**
+**geoc_bd09togcj02：百度坐标系转火星坐标系**
+
+
+### 注意事项
+
+**传入的geometry参数的 SRID 必须是 4326 或 4490 ，否则返回null。**
 
 ### 注
 **本文如对您有帮助，请在 github 上 star 一下**
