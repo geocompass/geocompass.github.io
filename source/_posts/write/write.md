@@ -5,7 +5,7 @@ categories: 写作
 author: LOUSANPANG
 tags:
     - 写作
-cover_picture: /images/markdown.jpg
+cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68har8gq4j31cq0u012u.jpg
 top: 2
 ---
 

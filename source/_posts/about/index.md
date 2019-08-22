@@ -4,7 +4,7 @@ date: 2019-08-21
 categories: LOUSANPANG
 tags:
     - 介绍
-cover_picture:
+cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg
 top: 1
 ---
 
