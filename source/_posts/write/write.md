@@ -45,13 +45,13 @@ hexo n [Your Blod Name]
 git pull # 建议每次都要更新哦 也许你在书写过程中，有人已经提交code啦
 
 在hexo分支提交到远程你的代码例如：
+hexo g
 git add --a
 git commit -a -m 'Your name commit pages'
 git push
 
 手动将子目录的 .git 文件复制粘贴到 .deploy_git 文件中
 
-hexo g
 hexo d
 ```
 
