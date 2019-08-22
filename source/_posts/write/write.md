@@ -5,11 +5,11 @@ categories: 写作
 author: LOUSANPANG
 tags:
     - 写作
-cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68har8gq4j31cq0u012u.jpg
+cover_picture: https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/thoem.jpg
 top: 2
 ---
 
-![miho](https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68har8gq4j31cq0u012u.jpg)
+![miho](https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/thoem.jpg)
 
 ### 一、安装
 #### 1.1 安装前提

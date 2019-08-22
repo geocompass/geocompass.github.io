@@ -6,11 +6,11 @@ author: LOUSANPANG
 tags:
     - 前端工具
     - 地图工具
-cover_picture: https://wx2.sinaimg.cn/mw690/006n3OP2gy1g68nrjzbngj30uq0u0akg.jpg
+cover_picture: https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/tool1.png
 ---
 
 <div align=center>
-    <img src="https://wx2.sinaimg.cn/mw690/006n3OP2gy1g68nrjzbngj30uq0u0akg.jpg">
+    <img src="https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/tool1.png">
 </div>
 
 ### 一、关于工具
@@ -18,7 +18,7 @@ cover_picture: https://wx2.sinaimg.cn/mw690/006n3OP2gy1g68nrjzbngj30uq0u0akg.jpg
 * 地图展示出来的距离不符合我们展示的要求例如：`0.01km 1.001km`
 * 对应地图信息标题展示内容过长例如：`北京市海淀区车道沟1号青东商务区`
 #### 1.2 需求
-* 我们可能想要的距离 `10km 1.0km`
+* 我们可能想要的距离 `10m 1.0km`
 * 我们想要的标题 `北京市...青东商务区`
 #### 1.3 应用
 ```js

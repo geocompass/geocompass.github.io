@@ -5,12 +5,12 @@ categories: 国信司南
 author: LOUSANPANG
 tags:
     - 关于我们
-cover_picture: https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg
+cover_picture: https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/geo.png
 top: 1
 ---
 
 <div align=center>
-    <img width=350 height="350" src="https://wx1.sinaimg.cn/mw690/006n3OP2gy1g68h6ggz38j3064032web.jpg">
+    <img width=350 height="350" src="https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/geo.png">
 </div>
 
 ### 关于我们
