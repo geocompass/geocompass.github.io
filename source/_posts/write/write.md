@@ -6,7 +6,7 @@ author: LOUSANPANG
 tags:
     - 写作
 cover_picture: https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/thoem.jpg
-top: 2
+top: 0
 ---
 
 ![miho](https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/thoem.jpg)
@@ -57,10 +57,10 @@ git push
 ### 二、常见命令
 #### 2.1 [命令](https://hexo.io/zh-cn/docs/commands)
 ``` bash
-hexo g == hexo generate #生成静态文件，在当前目录下生成一个新的叫做public的文件夹
-hexo s == hexo server #启动本地web服务，用于博客的预览
-hexo d == hexo deploy #部署播客到远端（比如github, heroku等平台）
-hexo clean #清除缓存文件 (db.json) 和已生成的静态文件 (public)
+hexo g == hexo generate #生成静态文件
+hexo s == hexo server #启动本地web服务
+hexo d == hexo deploy #部署播客到远端
+hexo clean #清除缓存文件
 hexo n == hexo new "postName" #新建文章
 hexo n == hexo new page "pageName" #新建页面
 ``` 
@@ -71,13 +71,13 @@ hexo n == hexo new page "pageName" #新建页面
 ---
 title: 关于书写
 date: 2019-08-21
-categories: 类别1
-author: MinHow
+categories: 前端
+author: LOUSANPANG
 tags:
-    - 标签1
-    - 标签2
+    - React
+    - Webpack
 cover_picture: /images/banner.jpg
-top: 1
+top: 0
 ---
 <!-- more -->
 ### 一、标题一
