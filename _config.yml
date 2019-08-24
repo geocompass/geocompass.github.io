@@ -2,12 +2,12 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
+# Site站点信息
+title: 国信司南技术团队博客
+subtitle: 系统工程二部
+description: 团队技术博客
+keywords: 设计、前端、后端、数据库、服务器
+author: Geo-Compass
 language: en
 timezone:
 
@@ -29,10 +29,10 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+new_post_name: :title.md # 新文章标题
+default_layout: post # post、page、photo、draft（文章、页面、照片、草稿）
+titlecase: false # 标题转换成大写
+external_link: true # 在新选项卡中打开连接
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -40,7 +40,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
 
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: miho
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
