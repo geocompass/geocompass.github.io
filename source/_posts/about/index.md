@@ -5,11 +5,11 @@ categories: 国信司南
 author: LOUSANPANG
 tags:
     - 关于我们
-cover_picture: /images/geocompass.png
+cover_picture: https://i.loli.net/2019/08/23/zT3iOJbPrAaL6Qp.jpg
 top: 1
 ---
 
-![国信司南](https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/geo.png)
+![国信司南](https://i.loli.net/2019/08/23/zT3iOJbPrAaL6Qp.jpg)
 
 ### 关于我们
 &emsp;&emsp;国信司南（北京）地理信息技术有限公司是国家基础地理信息中心基于促进地理信息产业发展的大局背景，经国家测绘地理信息局批准，于2009年12月成立的全资国有企业。为推进产业发展及地理信息社会化服务，公司相继注资成立了天地图有限公司、国测兴园（北京）投资有限公司。

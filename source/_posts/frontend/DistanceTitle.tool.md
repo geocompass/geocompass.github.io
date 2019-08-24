@@ -6,12 +6,10 @@ author: LOUSANPANG
 tags:
     - 前端工具
     - 地图工具
-cover_picture: https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/tool1.png
+cover_picture: https://i.loli.net/2019/08/23/kK4B79VfgmSy5Ne.png
 ---
 
-<div align=center>
-    <img src="https://github.com/LOUSANPANG/Picture-library/blob/master/geocompass/tool1.png">
-</div>
+![tool1.png](https://i.loli.net/2019/08/23/kK4B79VfgmSy5Ne.png)
 
 ### 一、关于工具
 #### 1.1 问题
