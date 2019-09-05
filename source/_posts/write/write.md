@@ -57,12 +57,14 @@ git push
 ### 二、常见命令
 #### 2.1 [命令](https://hexo.io/zh-cn/docs/commands)
 ``` bash
+
 hexo g == hexo generate #生成静态文件
 hexo s == hexo server #启动本地web服务
 hexo d == hexo deploy #部署播客到远端
 hexo clean #清除缓存文件
 hexo n == hexo new "postName" #新建文章
 hexo n == hexo new page "pageName" #新建页面
+
 ``` 
 
 ### 三、关于写作
