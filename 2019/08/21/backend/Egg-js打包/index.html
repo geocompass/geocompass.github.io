@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Egg.js打包 | 国信司南技术团队博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="设计、前端、后端、数据库、服务器">
+  
+  <meta name="description" content="本文由 @小刘 原创，转载请注明出处。 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;github示例地址：https://github.com/MrSmallLiu/pkg-egg-example &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;打包Node.js代码的工具有很多，有些工具在打包时将自己写的代码打包为二进制文件配合node_modules一起使用，有些工具将全部代">
+<meta name="keywords" content="Egg.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Egg.js打包">
+<meta property="og:url" content="http://geocompass.github.io/2019/08/21/backend/Egg-js打包/index.html">
+<meta property="og:site_name" content="国信司南技术团队博客">
+<meta property="og:description" content="本文由 @小刘 原创，转载请注明出处。 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;github示例地址：https://github.com/MrSmallLiu/pkg-egg-example &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;打包Node.js代码的工具有很多，有些工具在打包时将自己写的代码打包为二进制文件配合node_modules一起使用，有些工具将全部代">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-21T01:10:32.109Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Egg.js打包">
+<meta name="twitter:description" content="本文由 @小刘 原创，转载请注明出处。 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;github示例地址：https://github.com/MrSmallLiu/pkg-egg-example &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;打包Node.js代码的工具有很多，有些工具在打包时将自己写的代码打包为二进制文件配合node_modules一起使用，有些工具将全部代">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">国信司南技术团队博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                    <a  href="/2019/08/21/write/write/#more">
+                        <i class="fa fa-home"></i>
+                        <span>写作</span>
+                    </a>
+                    
+                    <a  href="/2019/08/21/about/index/#more">
+                        <i class="fa fa-user"></i>
+                        <span>我们</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/geocompass.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        国信司南技术团队博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        系统工程二部
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-backend/Egg-js打包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Egg.js打包
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/后端/">后端</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-08-21
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p> <strong>本文由 <a href="https://github.com/MrSmallLiu" target="_blank" rel="noopener">@小刘</a> 原创，转载请注明出处。</strong><br> &nbsp; &nbsp; &nbsp; &nbsp;<em>github示例地址：<a href="https://github.com/MrSmallLiu/pkg-egg-example" target="_blank" rel="noopener">https://github.com/MrSmallLiu/pkg-egg-example</a></em><br> &nbsp; &nbsp; &nbsp; &nbsp;打包Node.js代码的工具有很多，有些工具在打包时将自己写的代码打包为二进制文件配合node_modules一起使用，有些工具将全部代码打包为二进制，个人比较偏向于全部打包，例如<a href="https://github.com/zeit/pkg" target="_blank" rel="noopener">pkg</a>，都可以支持express、koa等框架打包，但是对于将koa框架封装后的Egg.js框架打包都没有说明如何使用，我在多次尝试后，加之阅读一部分Egg.js源码后终于利用<a href="https://github.com/zeit/pkg" target="_blank" rel="noopener">pkg</a>成功的打包。如下介绍如何利用<strong>pkg</strong>打包Egg.js代码。</p>
+<h2 id="利用pkg打包Egg-js代码"><a href="#利用pkg打包Egg-js代码" class="headerlink" title="利用pkg打包Egg.js代码"></a>利用pkg打包Egg.js代码</h2><pre><code>（上面嘟囔了一堆废话，终于步入正题。）     </code></pre><p><strong>pkg</strong>是将整个工程打包为一个二进制文件，包括node运行环境一起打包，非常方便迁移，而且不需要客户环境重新部署Node.js以及下载相关依赖，具体步骤如下： </p>
+<h3 id="安装pkg-参考pkg"><a href="#安装pkg-参考pkg" class="headerlink" title="安装pkg(参考pkg)"></a>安装<a href="https://github.com/zeit/pkg" target="_blank" rel="noopener">pkg</a>(参考pkg)</h3> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install pkg -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Egg-js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg-js工程目录下的将不能操作，于是修改Egg-js的public路径配置到运行路径下："><a href="#配置Egg-js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg-js工程目录下的将不能操作，于是修改Egg-js的public路径配置到运行路径下：" class="headerlink" title="配置Egg.js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg.js工程目录下的将不能操作，于是修改Egg.js的public路径配置到运行路径下："></a>配置Egg.js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg.js工程目录下的将不能操作，于是修改Egg.js的public路径配置到运行路径下：</h3> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改config/config.default.js</span></span><br><span class="line">config.static = &#123;</span><br><span class="line">        prefix: <span class="string">'/'</span>,</span><br><span class="line">        dir: process.cwd() + <span class="string">'/public'</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Egg-js的运行时路径。由于Egg-js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下："><a href="#配置Egg-js的运行时路径。由于Egg-js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下：" class="headerlink" title="配置Egg.js的运行时路径。由于Egg.js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下："></a>配置Egg.js的运行时路径。由于Egg.js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下：</h3> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="comment">//修改config/config.default.js</span></span><br><span class="line">config.rundir = process.cwd() + <span class="string">'/run'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改package-json配置pkg相关参数："><a href="#修改package-json配置pkg相关参数：" class="headerlink" title="修改package.json配置pkg相关参数："></a>修改package.json配置pkg相关参数：</h3><ul>
+<li><p><strong>将代码以静态文件方式添加到打包中：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//修改package.json，增加pkg节点</span></span><br><span class="line"><span class="string">"pkg"</span>: &#123;</span><br><span class="line">    <span class="string">"assets"</span>: [</span><br><span class="line">      <span class="string">"./config/*.js"</span>,</span><br><span class="line">      <span class="string">"./app.js"</span>,</span><br><span class="line">      <span class="string">"./app/**/*.js"</span>,</span><br><span class="line">      <span class="string">"./node_modules/nanoid/**/*.js"</span>  <span class="comment">//该行为必须添加，由于Egg.js使用nanoid库，其中用到一个文件pkg未能解析，于是手动添加</span></span><br><span class="line">  			]</span><br><span class="line">  		&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置pkg入口：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改package.json，增加bin节点，指定入口文件</span></span><br><span class="line"><span class="string">"bin"</span>: <span class="string">"build.js"</span></span><br><span class="line"><span class="comment">// build.js文件内容</span></span><br><span class="line"><span class="built_in">require</span>(__dirname + <span class="string">'/node_modules/egg-scripts/bin/egg-scripts.js'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置build命令</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改package.json,在scripts下增加build命令</span></span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"pkg . --targets node8-linux-x64 --out-path /usr/dist  --debug"</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// --targets 指定node版本为8以及linux-x64</span></span><br><span class="line"><span class="comment">// --out-path 指定打包后文件输出路径</span></span><br><span class="line"><span class="comment">// --debug 指定debug模式编译</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="开始打包"><a href="#开始打包" class="headerlink" title="开始打包"></a>开始打包</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 初次打包时间较长，后续打包pkg会使用node缓存，提高打包效率</span></span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">./test_pkg start /snapshot/test_pkg --port=<span class="number">9001</span> --title=test_pkg</span><br><span class="line"><span class="comment">// ./test_pkg 打包后的二进制文件</span></span><br><span class="line"><span class="comment">// /snapshot/test_pkg 其中/snapshot为必须路径，test_pkg为工程目录路径</span></span><br><span class="line"><span class="comment">// --port --title等支持与平常启动时的任意命令参数</span></span><br></pre></td></tr></table></figure>
+
+<p>以上即完成了Egg.js的项目打包工作，这时可能有人会想到<strong>数据库相关配置怎么动态来改变呢？</strong> <strong>C++编译的模块能否支持打包呢？</strong>，那请继续阅读。 </p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="如何支持动态config"><a href="#如何支持动态config" class="headerlink" title="如何支持动态config"></a>如何支持动态config</h3><p>可能有人会想到利用Egg.js的启动周期来做呀，那么说对了，就是利用<strong>configWillLoad</strong>周期来做，在项目中创建app.js文件（如果已经有的请忽略），利用周期读取外部config.js，然后替换config/config.default.js内容，示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 替换sequelize的storage，替换dataPath路径</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppBootHook</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(app) &#123;</span><br><span class="line">        <span class="keyword">this</span>.app = app;</span><br><span class="line">    &#125;</span><br><span class="line">    configWillLoad() &#123;</span><br><span class="line">        <span class="keyword">let</span> customConfig = <span class="built_in">require</span>(process.cwd() + <span class="string">'/config.js'</span>);</span><br><span class="line">        <span class="keyword">this</span>.app.config.sequelize.storage = customConfig.dbPath;</span><br><span class="line">        <span class="keyword">this</span>.app.config.dataPath = customConfig.dataPath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = AppBootHook;</span><br></pre></td></tr></table></figure>
+
+<p><font color="red"><strong><em>注意</em></strong></font><br>Node.js大部分用户应该都会使用sequelize，而对于Egg.js使用egg-sequelize，由于egg-sequelize周期中包含agent.js，启动时读取config/config.default.js，会导致启动失败，于是本人修改了一版egg-sequelize_pkg用于打包使用，除配置名称差异外使用方法与egg-sequelize一致，不需要修改原有代码,如下配置更改即可</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#123;app_root&#125;/config/plugin.js</span></span><br><span class="line">exports.sequelizePkg = &#123;</span><br><span class="line">  enable: <span class="literal">true</span>,</span><br><span class="line">  package: <span class="string">'egg-sequelize_pkg'</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// &#123;app_root&#125;/config/config.default.js</span></span><br><span class="line">exports.sequelizePkg = &#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>github地址为：<a href="https://github.com/MrSmallLiu/egg-sequelize_pkg" target="_blank" rel="noopener">https://github.com/MrSmallLiu/egg-sequelize_pkg</a> <em>欢迎提问题，也欢迎star</em></p>
+<h3 id="C-模块引入"><a href="#C-模块引入" class="headerlink" title="C++模块引入"></a>C++模块引入</h3><p>pkg介绍对于C++编译的.node模块，在打包时不会将其打包进二进制文件中，故需要特殊处理，目前是修改源码引用（各位有好的办法可以推荐给我）,然后将.node模块拿到运行目录下：</p>
+<ul>
+<li><p>修改node_modules中对应模块源码的require二进制文件的地方，将其修改为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以node-sqlite3为例</span></span><br><span class="line">将lib/sqlite3.js中的</span><br><span class="line"><span class="keyword">var</span> binding = <span class="built_in">require</span>(binding_path);</span><br><span class="line">修改为</span><br><span class="line"><span class="keyword">var</span> binding = <span class="built_in">require</span>(process.cwd()+<span class="string">'/node_sqlite3.node'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将源码中的node_sqlite3.node文件拷贝到编译后的运行目录，将整个文件夹zip即可在任何地方运行</p>
+</li>
+</ul>
+<hr>
+<p>以上介绍了如何利用pkg进行打包Egg.js工程，如有疑问可以联系作者或者下方评论，一起讨论。<br><em>QQ: 1016817543 邮箱：<a href="mailto:1016817543@qq.com" target="_blank" rel="noopener">1016817543@qq.com</a>  github：<a href="https://github.com/MrSmallLiu" target="_blank" rel="noopener">https://github.com/MrSmallLiu</a> (欢迎star)</em></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年05月21日 09:10</p>
+        <p>原始链接： <a class="post-url" href="/2019/08/21/backend/Egg-js打包/" title="Egg.js打包">http://geocompass.github.io/2019/08/21/backend/Egg-js打包/</a></p>
+        <footer>
+            <a href="http://geocompass.github.io">
+                <img src="/images/geocompass.png" alt="Geo-Compass">
+                Geo-Compass
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/&title=《Egg.js打包》 — 国信司南技术团队博客&pic=http://geocompass.github.ioimages/geocompass.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/&title=《Egg.js打包》 — 国信司南技术团队博客&source=团队技术博客" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Egg.js打包》 — 国信司南技术团队博客&url=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/&via=http://geocompass.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://geocompass.github.io/2019/08/21/backend/Egg-js打包/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Egg.js/" class="color2">Egg.js</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#利用pkg打包Egg-js代码"><span class="post-toc-text">利用pkg打包Egg.js代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装pkg-参考pkg"><span class="post-toc-text">安装pkg(参考pkg)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置Egg-js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg-js工程目录下的将不能操作，于是修改Egg-js的public路径配置到运行路径下："><span class="post-toc-text">配置Egg.js的public路径。由于打包后为二进制文件，对于某些用户将前端代码放在Egg.js工程目录下的将不能操作，于是修改Egg.js的public路径配置到运行路径下：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置Egg-js的运行时路径。由于Egg-js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下："><span class="post-toc-text">配置Egg.js的运行时路径。由于Egg.js运行时会生成run文件夹以及相关文件，而pkg打包后为二进制文件，不能在继续进行写操作，故将rundir配置到运行路径下：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改package-json配置pkg相关参数："><span class="post-toc-text">修改package.json配置pkg相关参数：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开始打包"><span class="post-toc-text">开始打包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行"><span class="post-toc-text">运行</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩展"><span class="post-toc-text">扩展</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何支持动态config"><span class="post-toc-text">如何支持动态config</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-模块引入"><span class="post-toc-text">C++模块引入</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/08/22/frontend/DistanceTitle.tool/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          前端工具-距离转换标题缩写
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/08/21/about/index/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">关于我们</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 Geo-Compass<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://geocompass.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/写作/">写作</a><a class="category-link" href="/categories/前端/">前端</a><a class="category-link" href="/categories/后端/">后端</a><a class="category-link" href="/categories/国信司南/">国信司南</a><a class="category-link" href="/categories/大数据/">大数据</a><a class="category-link" href="/categories/数据库/">数据库</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Egg-js/" style="font-size: 10px;">Egg.js</a> <a href="/tags/PostGIS/" style="font-size: 10px;">PostGIS</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/taro/" style="font-size: 10px;">taro</a> <a href="/tags/关于我们/" style="font-size: 10px;">关于我们</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/前端工具/" style="font-size: 20px;">前端工具</a> <a href="/tags/地图工具/" style="font-size: 10px;">地图工具</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/2019/08/21/write/write/#more">
+                    <i class="fa fa-home"></i><span>写作</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/2019/08/21/about/index/#more">
+                    <i class="fa fa-user"></i><span>我们</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Egg-js/" style="font-size: 10px;">Egg.js</a> <a href="/tags/PostGIS/" style="font-size: 10px;">PostGIS</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/taro/" style="font-size: 10px;">taro</a> <a href="/tags/关于我们/" style="font-size: 10px;">关于我们</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/前端工具/" style="font-size: 20px;">前端工具</a> <a href="/tags/地图工具/" style="font-size: 10px;">地图工具</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

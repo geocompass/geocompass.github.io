@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>格林威治转东八区格式工具 | 国信司南技术团队博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="设计、前端、后端、数据库、服务器">
+  
+  <meta name="description" content="一、关于工具1.1 问题 中国的标准时间为格林威治时间 + 8 转换后的格式问题1.2 需求 我们可能想要的转化格式 2017-08-27 22:40:21 2017/08/27 22:401.3 应用code/** * 格林威治时间转东八区 * newdata 需要转化的格林威治时间，例如&quot;2019-09-24T00:41:41.201Z&quot; * format 转化后的格式，默认&quot;yyyy-MM">
+<meta name="keywords" content="前端工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格林威治转东八区格式工具">
+<meta property="og:url" content="http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/index.html">
+<meta property="og:site_name" content="国信司南技术团队博客">
+<meta property="og:description" content="一、关于工具1.1 问题 中国的标准时间为格林威治时间 + 8 转换后的格式问题1.2 需求 我们可能想要的转化格式 2017-08-27 22:40:21 2017/08/27 22:401.3 应用code/** * 格林威治时间转东八区 * newdata 需要转化的格林威治时间，例如&quot;2019-09-24T00:41:41.201Z&quot; * format 转化后的格式，默认&quot;yyyy-MM">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/09/24/YJTRXIp4he8qm6V.png">
+<meta property="og:updated_time" content="2020-05-21T01:10:32.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="格林威治转东八区格式工具">
+<meta name="twitter:description" content="一、关于工具1.1 问题 中国的标准时间为格林威治时间 + 8 转换后的格式问题1.2 需求 我们可能想要的转化格式 2017-08-27 22:40:21 2017/08/27 22:401.3 应用code/** * 格林威治时间转东八区 * newdata 需要转化的格林威治时间，例如&quot;2019-09-24T00:41:41.201Z&quot; * format 转化后的格式，默认&quot;yyyy-MM">
+<meta name="twitter:image" content="https://i.loli.net/2019/09/24/YJTRXIp4he8qm6V.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">国信司南技术团队博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                    <a  href="/2019/08/21/write/write/#more">
+                        <i class="fa fa-home"></i>
+                        <span>写作</span>
+                    </a>
+                    
+                    <a  href="/2019/08/21/about/index/#more">
+                        <i class="fa fa-user"></i>
+                        <span>我们</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/geocompass.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        国信司南技术团队博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        系统工程二部
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-frontend/GreenwichToEasteight.tool" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      格林威治转东八区格式工具
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端/">前端</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-09-24
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><img src="https://i.loli.net/2019/09/24/YJTRXIp4he8qm6V.png" alt="格林威治转东八区格式工具.png"></p>
+<h3 id="一、关于工具"><a href="#一、关于工具" class="headerlink" title="一、关于工具"></a>一、关于工具</h3><h4 id="1-1-问题"><a href="#1-1-问题" class="headerlink" title="1.1 问题"></a>1.1 问题</h4><ul>
+<li>中国的标准时间为格林威治时间 + 8</li>
+<li>转换后的格式问题<h4 id="1-2-需求"><a href="#1-2-需求" class="headerlink" title="1.2 需求"></a>1.2 需求</h4></li>
+<li>我们可能想要的转化格式 <code>2017-08-27 22:40:21</code> <code>2017/08/27 22:40</code><h4 id="1-3-应用code"><a href="#1-3-应用code" class="headerlink" title="1.3 应用code"></a>1.3 应用code</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 格林威治时间转东八区</span></span><br><span class="line"><span class="comment"> * newdata 需要转化的格林威治时间，例如"2019-09-24T00:41:41.201Z"</span></span><br><span class="line"><span class="comment"> * format 转化后的格式，默认"yyyy-MM-dd hh:mm:ss"</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> GreenwichToEasteight = <span class="function">(<span class="params">newdata, format = <span class="string">"yyyy/MM/dd hh:mm"</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> that = <span class="keyword">new</span> <span class="built_in">Date</span>(newdata);</span><br><span class="line">  <span class="keyword">let</span> o = &#123;</span><br><span class="line">    <span class="string">"M+"</span>: that.getMonth() + <span class="number">1</span>, <span class="comment">//月份</span></span><br><span class="line">    <span class="string">"d+"</span>: that.getDate(), <span class="comment">//日</span></span><br><span class="line">    <span class="string">"h+"</span>: that.getHours(), <span class="comment">//小时</span></span><br><span class="line">    <span class="string">"m+"</span>: that.getMinutes(), <span class="comment">//分</span></span><br><span class="line">    <span class="string">"s+"</span>: that.getSeconds(), <span class="comment">//秒</span></span><br><span class="line">    <span class="string">"q+"</span>: <span class="built_in">Math</span>.floor((that.getMonth() + <span class="number">3</span>) / <span class="number">3</span>), <span class="comment">//季度</span></span><br><span class="line">    S: that.getMilliseconds()</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">if</span> (<span class="regexp">/(y+)/</span>.test(format))</span><br><span class="line">    format = format.replace(</span><br><span class="line">      <span class="built_in">RegExp</span>.$<span class="number">1</span>,</span><br><span class="line">      (that.getFullYear() + <span class="string">""</span>).substr(<span class="number">4</span> - <span class="built_in">RegExp</span>.$<span class="number">1.</span>length)</span><br><span class="line">    );</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> k <span class="keyword">in</span> o)</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"("</span> + k + <span class="string">")"</span>).test(format))</span><br><span class="line">      format = format.replace(</span><br><span class="line">        <span class="built_in">RegExp</span>.$<span class="number">1</span>,</span><br><span class="line">        <span class="built_in">RegExp</span>.$<span class="number">1.</span>length == <span class="number">1</span> ? o[k] : (<span class="string">"00"</span> + o[k]).substr((<span class="string">""</span> + o[k]).length)</span><br><span class="line">      );</span><br><span class="line">  <span class="keyword">return</span> format;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> GreenwichToEasteight;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="1-4-使用"><a href="#1-4-使用" class="headerlink" title="1.4 使用"></a>1.4 使用</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> GreenwichToEasteight <span class="keyword">from</span> <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">GreenwichToEasteight(<span class="string">"2019-09-24T00:41:41.201Z"</span>) <span class="comment">// "2019-09-24 08:41:41"</span></span><br><span class="line">GreenwichToEasteight(<span class="string">"2019-09-24T00:41:41.201Z"</span>, <span class="string">"yyyy/MM/dd hh:mm"</span>) <span class="comment">// "2019/09/24 08:41"</span></span><br></pre></td></tr></table></figure>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年05月21日 09:10</p>
+        <p>原始链接： <a class="post-url" href="/2019/09/24/frontend/GreenwichToEasteight.tool/" title="格林威治转东八区格式工具">http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/</a></p>
+        <footer>
+            <a href="http://geocompass.github.io">
+                <img src="/images/geocompass.png" alt="Geo-Compass">
+                Geo-Compass
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/&title=《格林威治转东八区格式工具》 — 国信司南技术团队博客&pic=https://i.loli.net/2019/09/24/z9G3wp5Zatj2BFl.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/&title=《格林威治转东八区格式工具》 — 国信司南技术团队博客&source=团队技术博客" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《格林威治转东八区格式工具》 — 国信司南技术团队博客&url=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/&via=http://geocompass.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://geocompass.github.io/2019/09/24/frontend/GreenwichToEasteight.tool/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/前端工具/" class="color5">前端工具</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、关于工具"><span class="post-toc-text">一、关于工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-问题"><span class="post-toc-text">1.1 问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-需求"><span class="post-toc-text">1.2 需求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-应用code"><span class="post-toc-text">1.3 应用code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-使用"><span class="post-toc-text">1.4 使用</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/05/frontend/DefineProperty.tool/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">前端工具-defineProperty实时监听globalState值的变化</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 Geo-Compass<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://geocompass.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/写作/">写作</a><a class="category-link" href="/categories/前端/">前端</a><a class="category-link" href="/categories/后端/">后端</a><a class="category-link" href="/categories/国信司南/">国信司南</a><a class="category-link" href="/categories/大数据/">大数据</a><a class="category-link" href="/categories/数据库/">数据库</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Egg-js/" style="font-size: 10px;">Egg.js</a> <a href="/tags/PostGIS/" style="font-size: 10px;">PostGIS</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/taro/" style="font-size: 10px;">taro</a> <a href="/tags/关于我们/" style="font-size: 10px;">关于我们</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/前端工具/" style="font-size: 20px;">前端工具</a> <a href="/tags/地图工具/" style="font-size: 10px;">地图工具</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/2019/08/21/write/write/#more">
+                    <i class="fa fa-home"></i><span>写作</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/2019/08/21/about/index/#more">
+                    <i class="fa fa-user"></i><span>我们</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Egg-js/" style="font-size: 10px;">Egg.js</a> <a href="/tags/PostGIS/" style="font-size: 10px;">PostGIS</a> <a href="/tags/PostgreSQL/" style="font-size: 10px;">PostgreSQL</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/taro/" style="font-size: 10px;">taro</a> <a href="/tags/关于我们/" style="font-size: 10px;">关于我们</a> <a href="/tags/写作/" style="font-size: 10px;">写作</a> <a href="/tags/前端工具/" style="font-size: 20px;">前端工具</a> <a href="/tags/地图工具/" style="font-size: 10px;">地图工具</a> <a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
